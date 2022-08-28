@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'brand';
+  src:  url('fonts/brand.eot?8l4iy1');
+  src:  url('fonts/brand.eot?8l4iy1#iefix') format('embedded-opentype'),
+    url('fonts/brand.ttf?8l4iy1') format('truetype'),
+    url('fonts/brand.woff?8l4iy1') format('woff'),
+    url('fonts/brand.svg?8l4iy1#brand') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="i-brand-"], [class*=" i-brand-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'brand' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-brand-tiktok_1:before {
+  content: "\e916";
+}
+.i-brand-tiktok_2:before {
+  content: "\e91c";
+}
+.i-brand-canime:before {
+  content: "\e915";
+}
+.i-brand-bilibili:before {
+  content: "\e911";
+}
+.i-brand-weibo:before {
+  content: "\e912";
+}
+.i-brand-android:before {
+  content: "\e907";
+  color: #a4c639;
+}
+.i-brand-apple:before {
+  content: "\e908";
+  color: #999;
+}
+.i-brand-evernote:before {
+  content: "\e944";
+  color: #2dbe60;
+}
+.i-brand-facebook_1:before {
+  content: "\e900";
+  color: #3b5998;
+}
+.i-brand-facebook_2:before {
+  content: "\e90a";
+  color: #3b5998;
+}
+.i-brand-facebook_3:before {
+  content: "\e910";
+  color: #3b5998;
+}
+.i-brand-feedly:before {
+  content: "\e901";
+  color: #6cc655;
+}
+.i-brand-google:before {
+  content: "\e902";
+  color: #4285f4;
+}
+.i-brand-hangout:before {
+  content: "\e903";
+  color: #0c9d58;
+}
+.i-brand-googleplus:before {
+  content: "\e904";
+  color: #dc4e41;
+}
+.i-brand-hatebu_1:before {
+  content: "\e905";
+  color: #00a4de;
+}
+.i-brand-hatebu_2:before {
+  content: "\e90c";
+  color: #00a4de;
+}
+.i-brand-instagram:before {
+  content: "\e906";
+  color: #e4405f;
+}
+.i-brand-line:before {
+  content: "\e909";
+  color: #00c300;
+}
+.i-brand-messenger:before {
+  content: "\e90b";
+  color: #0084ff;
+}
+.i-brand-pinterest:before {
+  content: "\e90d";
+  color: #bd081c;
+}
+.i-brand-plurk:before {
+  content: "\e90e";
+  color: #e9443d;
+}
+.i-brand-pocket:before {
+  content: "\e90f";
+  color: #ef3f56;
+}
+.i-brand-skype:before {
+  content: "\e913";
+  color: #00aff0;
+}
+.i-brand-slack:before {
+  content: "\e914";
+  color: #56b68b;
+}
+.i-brand-tumblr:before {
+  content: "\e917";
+  color: #36465d;
+}
+.i-brand-twitter:before {
+  content: "\e918";
+  color: #1da1f2;
+}
+.i-brand-wechat:before {
+  content: "\e919";
+  color: #7bb32e;
+}
+.i-brand-whatsapp:before {
+  content: "\e91a";
+  color: #25d366;
+}
+.i-brand-youtube:before {
+  content: "\e91b";
+  color: #cd201f;
+}
