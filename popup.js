@@ -45,7 +45,7 @@ function bangumi(){
         // 点击条目显示条目详细介绍
         banguminfo.innerHTML = `
         <header class="l-spacer_mg_b_l1"><h1 class="c-txt-size_l4 u-mg_b_none u-mg_t_none u-ft-fml_noto-serif-regular u-cl_pink">无法获取到番剧数据</h1></header>
-        <p>请查看您的网络是否正常再重新打开浏览器试试看。</a></p>
+        <p>请查看您的网络是否正常再重新打开浏览器试试看。</p>
         `;
     }
     

@@ -1,8 +1,10 @@
 # Anime-List-Crx
 
-番剧放送表 浏览器插件,番剧数据来自 https://github.com/AzumWatson/anime-data
+这是一个番剧放送表 浏览器插件,为了更加便利的查看番剧更新时间
 
-前端页面参考 『よふかしのうた』(彻夜之歌) 的官网
+番剧数据等来自 https://github.com/AzumWatson/anime-data
+
+前端页面参考 『[よふかしのうた](https://yofukashi-no-uta.com/)』 (彻夜之歌) TV 的官网 (因为我不会写css)
 
 ## 如何使用
 
@@ -17,3 +19,7 @@
 ![预览图1](./img/1.png)
 
 ![预览图2](./img/2.png)
+
+## 代办
+
+可能后续会进行UI重构吧,或许
