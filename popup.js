@@ -13,11 +13,11 @@ const days = [6,0,1,2,3,4,5]
 const bg = chrome.extension.getBackgroundPage();
 
 const data = bg.data;
+const aboutdata = bg.aboutdata;
 const arraaa = bg.arraaa;
 const arrbbb = bg.arrbbb;
 const arrccc = bg.arrccc;
 const ss = bg.ss;
-
 
 console.log(bg.a);
 console.log(section);
@@ -25,6 +25,16 @@ console.log(section);
 for(let i=0;i<button.length;i++){
     button[i].id = i+1;
     button[i].onclick = bangumi;
+}
+
+if(aboutdata != undefined && aboutdata.version != "1.0.0"){
+    aboutinfo.style.display = "block";
+
+    // 点击条目显示条目详细介绍
+    banguminfo.innerHTML = `
+    <header class="l-spacer_mg_b_l1"><h1 class="c-txt-size_l4 u-mg_b_none u-mg_t_none u-ft-fml_noto-serif-regular u-cl_pink">插件已有新版本</h1></header>
+    <p><a target="_blank" href="${aboutdata.repourl}">前往更新！！</a></p>
+    `;
 }
 
 function bangumi(){
@@ -146,16 +156,29 @@ aboutblack.addEventListener('click',()=>{
 
 about.addEventListener('click',()=>{
     aboutinfo.style.display = "block";
-    banguminfo.innerHTML = `
-    <header class="l-spacer_mg_b_l1"><h1 class="c-txt-size_l4 u-mg_b_none u-mg_t_none u-ft-fml_noto-serif-regular u-cl_pink">番剧时间表</h1></header>
-    <p>一个查看每日番剧的浏览器 拓展 / 插件</p>
-    <p>番剧信息是使用 <a target="_blank" href = "https://github.com/AzumWatson/bangumi-data">AzumWatson/bangumi-data</a> 的数据</p>
-    <p>前端页面 大量几乎全部 <del>参考</del>使用 『<a target="_blank" href = "https://yofukashi-no-uta.com/">よふかしのうた</a>』 (彻夜之歌) 的 TV 官网页面</p>
-    <p>该项目已在 Github 上开源，<a target="_blank" href = "https://github.com/azumwatson/bangumi2.0">进入仓库页面</a></p>
-    <p class="u-cl_pink">如果有发现 Bug 请在 Github 上发起 Issues,也可以点击下面按钮邮件联系我</p>                            <div id="aboutblack" class="c-btn c-btn--frame" data-active="" style="margin: 14 auto;" div="">
-    <a href=mailto:kelulululu@outlook.com><span class="c-btn--frame__frame"></span>提交问题</a>
-    </div>
-    `;
+    if(aboutdata != undefined){
+        banguminfo.innerHTML = `u
+        <header class="l-spacer_mg_b_l1"><h1 class="c-txt-size_l4 u-mg_b_none u-mg_t_none u-ft-fml_noto-serif-regular u-cl_pink">${aboutdata.name}</h1></header>
+        <p>一个查看每日番剧的 浏览器拓展 / 插件</p>
+        <p>番剧数据是使用 <a target="_blank" href = "https://github.com/AzumWatson/anime-data">AzumWatson/anime-data</a> 的数据</p>
+        <p>前端页面 参考 『<a target="_blank" href = "https://yofukashi-no-uta.com/">よふかしのうた</a>』 (彻夜之歌) 的 TV 官网页面</p>
+        <p>该项目已在 Github 上开源，<a target="_blank" href = "${aboutdata.repourl}">进入仓库页面</a></p>
+        <p class="u-cl_pink">如果有发现 Bug 请在 Github 上发起 Issues,也可以点击下面按钮邮件联系我</p><div id="aboutblack" class="c-btn c-btn--frame" data-active="" style="margin: 14 auto;" div="">
+        <a href=mailto:${aboutdata.email}><span class="c-btn--frame__frame"></span>提交问题</a>
+        </div>
+        `;
+    }else{
+        banguminfo.innerHTML = `u
+        <header class="l-spacer_mg_b_l1"><h1 class="c-txt-size_l4 u-mg_b_none u-mg_t_none u-ft-fml_noto-serif-regular u-cl_pink">番剧时间表</h1></header>
+        <p>一个查看每日番剧的 浏览器拓展 / 插件</p>
+        <p>番剧数据是使用 <a target="_blank" href = "https://github.com/AzumWatson/anime-data">AzumWatson/anime-data</a> 的数据</p>
+        <p>前端页面 参考 『<a target="_blank" href = "https://yofukashi-no-uta.com/">よふかしのうた</a>』 (彻夜之歌) 的 TV 官网页面</p>
+        <p>该项目已在 Github 上开源，<a target="_blank" href = "https://github.com/azumwatson/anime-list-crx">进入仓库页面</a></p>
+        <p class="u-cl_pink">如果有发现 Bug 请在 Github 上发起 Issues,也可以点击下面按钮邮件联系我</p><div id="aboutblack" class="c-btn c-btn--frame" data-active="" style="margin: 14 auto;" div="">
+        <a href=mailto:kelulululu@outlook.com><span class="c-btn--frame__frame"></span>提交问题</a>
+        </div>
+        `;
+    }
 });
 
 button[days[day]].children[0].innerHTML = "今天";

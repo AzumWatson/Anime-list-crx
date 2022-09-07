@@ -6,6 +6,7 @@ var data;
 var datass;
 var lengths;
 var daten;
+var aboutdata;
 
 var arraaa = [];
 var arrbbb = [];
@@ -15,6 +16,7 @@ var ss = 100;
 
 // bgmtime();
 bgmapi();
+newVersion();
 
 
 function bgmapi(){
@@ -26,8 +28,6 @@ function bgmapi(){
             if(xhr.status >= 200 && xhr.status < 300){
                 data = xhr.response;
                 console.log(data);
-                // button[days[day]].children[0].innerHTML = "今天";
-                // button[days[day]].click();
             }else{
                 ss--;
                 console.log("再次尝试连接"+ss);
@@ -39,6 +39,28 @@ function bgmapi(){
     }
 
     xhr.open('GET','https://raw.githubusercontent.com/AzumWatson/anime-data/main/data.json');
+    xhr.send();
+}
+
+function newVersion(){
+    const xhr =  new XMLHttpRequest();
+    xhr.responseType = 'json';
+
+    xhr.onreadystatechange = ()=>{
+        if(xhr.readyState === 4){
+            if(xhr.status >= 200 && xhr.status < 300){
+                aboutdata = xhr.response;
+            }else{
+                ss--;
+                console.log("再次尝试连接"+ss);
+                if(ss){
+                    setTimeout(bgmapi,400);
+                }
+            }
+        }
+    }
+
+    xhr.open('GET','https://raw.githubusercontent.com/AzumWatson/Anime-list-crx/about/about.json');
     xhr.send();
 }
 
