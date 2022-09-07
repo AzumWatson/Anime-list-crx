@@ -1,0 +1,37 @@
+{
+    // 清单文件的版本，这个必须写，而且必须是2
+    "manifest_version": 2,
+    // 插件的名称
+    "name": "番剧时间表",
+    // 插件的版本
+    "version": "1.0.0",
+    // 插件描述
+    "description": "一个查看每日番剧的 浏览器拓展 / 插件",
+    
+    "icons":
+    {
+    "16": "img/icon.png",
+    "48": "img/icon.png",
+    "128": "img/icon.png"
+    },
+
+    // 会一直常驻的后台JS或后台页面
+    "background":
+    {
+        // 2种指定方式，如果指定JS，那么会自动生成一个背景页
+        // "page": "background.html"
+        "scripts": ["background.js"]
+    },
+    "homepage_url": "https://github.com/azumwatson/bangumi2.0",
+
+    "default_title": "一个查看每日番剧的 浏览器拓展 / 插件",
+
+    "browser_action": {	//浏览器行为
+        "default_icon": "img/icon.png",	//在浏览器上的小图标
+        "default_title": "快点我快点我",
+        "default_popup": "popup.html"	//点击上面的小图标后弹出的那个小窗口页面
+    },
+    // 默认语言
+    // devtools页面入口，注意只能指向一个HTML文件，不能是JS文件
+    "devtools_page": "index.html"
+   }
