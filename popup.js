@@ -157,7 +157,7 @@ aboutblack.addEventListener('click',()=>{
 about.addEventListener('click',()=>{
     aboutinfo.style.display = "block";
     if(aboutdata != undefined){
-        banguminfo.innerHTML = `u
+        banguminfo.innerHTML = `
         <header class="l-spacer_mg_b_l1"><h1 class="c-txt-size_l4 u-mg_b_none u-mg_t_none u-ft-fml_noto-serif-regular u-cl_pink">${aboutdata.name}</h1></header>
         <p>一个查看每日番剧的 浏览器拓展 / 插件</p>
         <p>番剧数据是使用 <a target="_blank" href = "https://github.com/AzumWatson/anime-data">AzumWatson/anime-data</a> 的数据</p>
@@ -168,7 +168,7 @@ about.addEventListener('click',()=>{
         </div>
         `;
     }else{
-        banguminfo.innerHTML = `u
+        banguminfo.innerHTML = `
         <header class="l-spacer_mg_b_l1"><h1 class="c-txt-size_l4 u-mg_b_none u-mg_t_none u-ft-fml_noto-serif-regular u-cl_pink">番剧时间表</h1></header>
         <p>一个查看每日番剧的 浏览器拓展 / 插件</p>
         <p>番剧数据是使用 <a target="_blank" href = "https://github.com/AzumWatson/anime-data">AzumWatson/anime-data</a> 的数据</p>
