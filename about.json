@@ -1,28 +1,6 @@
 {
-    "manifest_version": 2,
     "name": "番剧时间表",
     "version": "1.0.0",
-    "description": "一个查看每日番剧的 浏览器拓展 / 插件",
-    
-    "icons":
-    {
-    "16": "img/icon.png",
-    "48": "img/icon.png",
-    "128": "img/icon.png"
-    },
-
-    "background":
-    {
-        "scripts": ["background.js"]
-    },
-    "homepage_url": "https://github.com/azumwatson/bangumi2.0",
-
-    "default_title": "一个查看每日番剧的 浏览器拓展 / 插件",
-
-    "browser_action": {	
-        "default_icon": "img/icon.png",	
-        "default_title": "番剧时间表",
-        "default_popup": "popup.html"	
-    },
-    "devtools_page": "index.html"
+    "email": "kelulululu@outlook.com",
+    "repourl": "https://github.com/azumwatson/anime-list-crx"
 }
